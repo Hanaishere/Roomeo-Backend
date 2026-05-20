@@ -1,17 +1,17 @@
 
-# ⚙️ DormFinder Backend
+#  Roomeo Backend
 
 REST API and server-side logic for DormFinder.
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 This backend powers the DormFinder platform by handling data, authentication, and API endpoints.
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 - Java  
 - Spring Boot  
@@ -20,7 +20,7 @@ This backend powers the DormFinder platform by handling data, authentication, an
 
 ---
 
-## ✨ Features
+##  Features
 
 - 🗂️ Manage dorm listings  
 - 👤 User authentication  
