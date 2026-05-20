@@ -22,6 +22,7 @@ public class DormService {
     }
 
     public Dorm updateDorm(Long id, Dorm dorm) {
+        dorm.setId(id);
         return repo.save(dorm);
     }
 

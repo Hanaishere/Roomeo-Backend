@@ -23,7 +23,6 @@ public class DormController {
     public ResponseEntity<List<Dorm>> getAllProducts()
     {
         return new ResponseEntity<>(service.getAllDorm(), HttpStatus.OK);
-
     }
     @PostMapping
     public Dorm create(@RequestBody Dorm dorm) {

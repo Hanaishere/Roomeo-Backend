@@ -1,5 +1,6 @@
 package com.dormFindrBackend.dormfindr.model;
-
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,10 +17,19 @@ public class Dorm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @NotBlank
     private String name;
+
+    @NotBlank
     private String city;
+
+    @NotBlank
     private String type;
-    private String price;
+
+    @NotNull
+    private Double price;
+
     private String imageUrl;
 
 
