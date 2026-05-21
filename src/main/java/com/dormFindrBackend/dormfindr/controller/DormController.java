@@ -38,4 +38,18 @@ public class DormController {
     {
          service.deleteDorm(id);
     }
+    @GetMapping("/search")
+    public ResponseEntity<List<Dorm>> searchByCity(@RequestParam String city)
+    {
+        return new ResponseEntity<>(service.getDormsByCity(city),HttpStatus.OK);
+    }
+    @GetMapping("/type")
+    public ResponseEntity<List<Dorm>> searchByType(@RequestParam String type) {
+        return new ResponseEntity<>(service.getDormsByType(type), HttpStatus.OK);
+    }
+    @GetMapping("/price")
+    public ResponseEntity<List<Dorm>> searchByPrice(@RequestParam Double min,
+                                                    @RequestParam Double max) {
+        return new ResponseEntity<>(service.getDormsByPriceRange(min, max), HttpStatus.OK);
+    }
 }

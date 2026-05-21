@@ -29,4 +29,15 @@ public class DormService {
     public void deleteDorm(Long id) {
         repo.deleteById(id);
     }
+    public List<Dorm> getDormsByCity(String city) {
+        return repo.findByCity(city);
+    }
+
+    public List<Dorm> getDormsByType(String type) {
+        return repo.findByType(type);
+    }
+
+    public List<Dorm> getDormsByPriceRange(Double min, Double max) {
+        return repo.findByPriceBetween(min, max);
+    }
 }
