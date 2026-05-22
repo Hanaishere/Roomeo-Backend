@@ -28,6 +28,16 @@ public class DataSeeder implements CommandLineRunner {
         String[] types = {"PG", "Hostel", "Dormitory", "Shared Apartment"};
         String[] names = {"Sunshine", "Green Valley", "City View", "Royal",
                 "Paradise", "Comfort", "Budget Stay", "Student Hub"};
+        String[] imageUrls = {
+                "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400",
+                "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400",
+                "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400",
+                "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400",
+                "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400",
+                "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400",
+                "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+                "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=400"
+        };
 
         Random random = new Random();
         List<Dorm> dorms = new ArrayList<>();
@@ -38,7 +48,7 @@ public class DataSeeder implements CommandLineRunner {
             dorm.setCity(cities[random.nextInt(cities.length)]);
             dorm.setType(types[random.nextInt(types.length)]);
             dorm.setPrice(3000.0 + (random.nextInt(17000)));
-            dorm.setImageUrl("https://example.com/dorm" + i + ".jpg");
+            dorm.setImageUrl(imageUrls[random.nextInt(imageUrls.length)]);
             dorms.add(dorm);
         }
 
