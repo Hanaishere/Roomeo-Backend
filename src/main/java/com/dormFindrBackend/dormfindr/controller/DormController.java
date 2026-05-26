@@ -14,7 +14,7 @@ import java.util.Locale;
 
 @RestController
 @RequestMapping("/api/dorms")
-@CrossOrigin(origins = "*")
+
 public class DormController {
     @Autowired
     private DormService service;
