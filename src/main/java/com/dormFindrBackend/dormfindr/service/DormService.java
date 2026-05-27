@@ -40,4 +40,8 @@ public class DormService {
     public List<Dorm> getDormsByPriceRange(Double min, Double max) {
         return repo.findByPriceBetween(min, max);
     }
+    public List<Dorm> searchByName(String name)
+    {
+        return repo.findByNameContainingIgnoreCase(name);
+    }
 }

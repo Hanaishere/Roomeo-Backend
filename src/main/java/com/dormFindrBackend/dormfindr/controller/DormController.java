@@ -52,4 +52,9 @@ public class DormController {
                                                     @RequestParam Double max) {
         return new ResponseEntity<>(service.getDormsByPriceRange(min, max), HttpStatus.OK);
     }
+    public ResponseEntity<List<Dorm>>searchByName(@RequestParam String name)
+    {
+        return new ResponseEntity<>(service.searchByName(name),HttpStatus.OK);
+
+    }
 }

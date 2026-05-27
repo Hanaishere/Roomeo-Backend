@@ -9,5 +9,7 @@ public interface DormRepository extends JpaRepository<Dorm,Long> {
     List<Dorm> findByCity(String city);
     List<Dorm> findByType(String type);
     List<Dorm> findByPriceBetween(Double min,Double max);
+    List<Dorm> findByNameContainingIgnoreCase(String name);
+
 
 }
